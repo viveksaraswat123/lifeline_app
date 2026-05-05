@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import {
   View, Text, StyleSheet, FlatList, TouchableOpacity, Modal,
-  Alert, ScrollView, RefreshControl, Clipboard, StatusBar,
+  Alert, ScrollView, RefreshControl, StatusBar,
 } from 'react-native';
+import * as ExpoClipboard from 'expo-clipboard';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { fetchDevices, registerDevice } from '../../store/slices/deviceSlice';
 import { deviceApi } from '../../api/client';
@@ -159,8 +160,8 @@ export function DeviceDetailScreen({ route, navigation }: any) {
     }
   };
 
-  const copyKey = () => {
-    if (device) { Clipboard.setString(device.api_key); Alert.alert('Copied', 'API key copied to clipboard'); }
+  const copyKey = async () => {
+    if (device) { await ExpoClipboard.setStringAsync(device.api_key); Alert.alert('Copied', 'API key copied to clipboard'); }
   };
 
   const regenKey = () => {

@@ -36,7 +36,7 @@
       [
         "expo-notifications",
         {
-          "icon": "./assets/notification-icon.png",
+          "icon": "./assets/icon.png",
           "color": "#FF3B5C",
           "sounds": ["./assets/alert_sound.wav"],
           "androidMode": "default",
@@ -46,7 +46,7 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "your-eas-project-id"
+        "projectId": "43f63f95-ab32-4206-b1b8-f4f75f2d8fd5"
       }
     }
   }

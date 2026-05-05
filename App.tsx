@@ -72,7 +72,7 @@ function AppInner() {
 
       try {
         const result = await Notifications.default.getExpoPushTokenAsync({
-          projectId: 'your-eas-project-id',
+          projectId: '43f63f95-ab32-4206-b1b8-f4f75f2d8fd5',
         });
 
         token = result.data;

@@ -142,8 +142,7 @@ export default function HomeScreen({ navigation }: any) {
           {devices.map(d => (
             <Card key={d.id} style={[styles.deviceRow, styles.glassCard]}>
              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-              <Text style={{ fontSize: 28, marginRight: 10 }}>📡</Text>
-                <Text style={{ fontSize: 28 }}>📡</Text>
+                <Text style={{ fontSize: 28, marginRight: 10 }}>📡</Text>
                 <View>
                   <Text style={styles.deviceName}>{d.name}</Text>
                   <Text style={styles.deviceId}>{d.device_uid}</Text>
